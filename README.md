@@ -7,7 +7,7 @@ Magento 2 module which add coupon code and discount amount columns into Sales Or
 # Features:
 
 - display of columns
-- custom formatting of column display value (discount amount made formatted with currency symbol and to be float with precision 3 level)
+- custom formatting of column display value (discount amount made formatted with currency symbol and to be float with precision 2 level)
 - filtering of results by coupon code
 - searching capability in global search input for grid
 - filtering of results by discount amount

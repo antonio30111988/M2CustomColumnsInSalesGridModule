@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <container name="discount_amount">
+        <filters name="listing_filters">
+            <filterInput name="order_items">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="dataScope" xsi:type="string">discount_amount</item>
+                        <item name="label" xsi:type="string" translate="true">Discount Amount</item>
+                    </item>
+                </argument>
+            </filterInput>
+        </filters>
+    </container>
+    <container name="coupon_code">
+        <filters name="listing_filters">
+            <filterInput name="order_items">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="dataScope" xsi:type="string">coupon_code</item>
+                        <item name="label" xsi:type="string" translate="true">Coupon Code</item>
+                    </item>
+                </argument>
+            </filterInput>
+        </filters>
+    </container>
+    <columns name="sales_order_columns" class="Magento\Customer\Ui\Component\Listing\Columns">
+        <column name="discount_amount" sortOrder="40" class="Antonio88\CustomColumnsInSalesGrid\UI\Component\Columns\OrderGrid" >
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Discount Amount</item>
+                </item>
+            </argument>
+        </column>
+        <column name="coupon_code" sortOrder="40">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="align" xsi:type="string">left</item>
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Coupon Code</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

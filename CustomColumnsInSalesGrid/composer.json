@@ -1,0 +1,17 @@
+{
+  "name": "antonio88/custom-columns-in-sales-grid",
+  "description": "Custom columns in Sales Grid library",
+  "type": "magento2-module",
+  "require": {
+    "php": "^7.0",
+    "magento/framework": "^100.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Antonio88\\CustomColumnsInSalesGrid\\": ""
+    }
+  }
+}
